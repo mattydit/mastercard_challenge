@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Credit Card Form
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="validation.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="form_container">
+            <form name="creditForm" onsubmit="return(validate());">
+                <img src="logo.png" width="8%" height="8%">
+                <br>
+                <label for="cardNo">Card number</label>
+                <br>
+                <input id="long" type="text" placeholder="XXXX XXXX XXXX XXXX" name="cardNo" maxlength="16" required>
+                <br><br>
+                <label for="card_name">Name on card</label>
+                <br>
+                <input id="long" type="text" placeholder="Ex. John Doe" name="card_name" required>
+                <br><br>
+                <div id="expirydate">
+                    <label for="expiry">Expiry date</label>
+                    <br>
+                    <input id="short" type="text" placeholder="mm" name="expiryMonth" maxlength="2" style="width: 40px;" required> / 
+                    <input id="short" type="text" placeholder="yy" name="expiryYr" maxlength="2" style="width: 40px;" required>
+                </div>
+                <div id="secucode">
+                    <label for="sec_code">Security code</label>
+                    <br>
+                    <input name="sec_code" id="short" type="text" placeholder="***" maxlength="3" required>
+                </div>
+                <br>
+                <input type="submit" value="Pay">
+            </form>
+        </div>
+    </body>
+</html>
